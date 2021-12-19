@@ -1,0 +1,73 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>Table 09</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href='{% static "table/css/style.css" %}'>
+
+</head>
+<body>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Birth Details</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrap">
+                    <table class="table table-striped">
+                        <thead>
+
+                        <th>Child Name</th>
+                        <th>Gender</th>
+                        <th>Birth Date</th>
+                        <th>Birth Place</th>
+                        <th>Mother Name</th>
+                        <th>Father Name</th>
+
+                        <th>Address</th>
+                        <th>Panchayat/Muncipality/Coorporation</th>
+                        <th>Ceritificate</th>
+
+                        </thead>
+                        <tbody>
+                        {% for i in birthdata %}
+                        <tr>
+                            <td>{{i.childname}}</td>
+                            <td>{{i.gender}}</td>
+                            <td>{{i.birthdate}}</td>
+                            <td>{{i.birthplace}}</td>
+                            <td>{{i.mothername}}</td>
+                            <td>{{i.fathername}}</td>
+                            <td>{{i.address}}</td>
+                            <td>{{i.pmc}}</td>
+
+                            <td>{{i.totalmembers}}</td>
+                            <td><a href='{% static "table/images/cb1.png" %}'>Download Cerificate</a></td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src='{% static "table/js/jquery.min.js" %}'></script>
+<script src='{% static "table/js/popper.js" %}'></script>
+<script src='{% static "table/js/bootstrap.min.js" %}'></script>
+<script src='{% static "table/js/main.js" %}'></script>
+
+</body>
+</html>
+

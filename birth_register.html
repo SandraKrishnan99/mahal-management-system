@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sign Up Form by Colorlib</title>
+
+  <!-- Font Icon -->
+  <link rel="stylesheet" href='{% static "forms/fonts/material-icon/css/material-design-iconic-font.min.css" %}'>
+
+  <!-- Main css -->
+  <link rel="stylesheet" href='{% static "forms/css/style.css" %}'>
+</head>
+<body>
+
+<div class="main">
+
+  <div class="container">
+    <div class="booking-content">
+      <div class="booking-image">
+        <img class="booking-img" src='{% static "forms/images/course.jpg" %}' alt="Booking Image">
+      </div>
+      <div class="booking-form">
+        <form id="booking-form" method="post" action="{% url 'birth_reg_save' %}">
+          {% csrf_token %}
+          <h2>Birth Registration</h2>
+          <div class="form-group form-input">
+            <input type="text" name="cname"  required/>
+
+            <label class="form-label"> Child Name</label>
+
+          </div>
+          <br>
+          <br>
+          <div class="form-group form-input">
+            <label for="gender" class="radio-label">Gender :</label>
+            <div class="form-radio-item">
+              <input type="radio" name="gender" id="male" value="male" checked>
+              <label for="male">Male</label>
+              <span class="check"></span>
+            </div>
+            <div class="form-radio-item">
+              <input type="radio" name="gender" id="female" value="female">
+              <label for="female">Female</label>
+              <span class="check"></span>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="form-group form-input">
+            <input type="date" name="bdate"  required/>
+
+            <label class="form-label">Birth Date</label>
+
+          </div>
+          <br>
+          <br>
+          <div class="form-group form-input">
+            <input type="text" name="bplace"  required/>
+
+            <label class="form-label">Birth Place</label>
+
+          </div>
+          <br>
+          <br>
+          <div class="form-group form-input">
+            <input type="text" name="mname"  required/>
+
+            <label class="form-label">Mother Name</label>
+
+          </div>
+          <br>
+          <br>
+          <div class="form-group form-input">
+            <input type="text" name="fname"  required/>
+
+            <label class="form-label">Father Name</label>
+
+          </div>
+          <br>
+          <br>
+          <div class="form-group form-input">
+            <input type="text" name="address"  required/>
+
+            <label class="form-label">Address</label>
+
+          </div>
+          <br>
+
+          <br>
+          <div class="form-group form-input">
+            <input type="text" name="pmc"  required/>
+
+            <label class="form-label">Panchayat/Munciplaity/Coorporation</label>
+
+          </div>
+          <br>
+
+          <br>
+          <br>
+
+          <br>
+
+
+          <div class="form-submit">
+            <input type="submit" value="ADD Course" class="submit" id="submit" name="submit"/>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- JS -->
+<script src='{% static "forms/vendor/jquery/jquery.min.js" %}'></script>
+<script src='{% static "forms/js/main.js" %}'></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
